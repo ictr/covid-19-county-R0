@@ -1,4 +1,4 @@
-County_Name	date	fatalities
+county	date	fatalities
 Anderson	20200304	0
 Andrews	20200304	0
 Angelina	20200304	0
