@@ -201,8 +201,7 @@ Rockwall	20200304	0
 Runnels	20200304	0
 Rusk	20200304	0
 Sabine	20200304	0
-San
-Augustine	20200304	0
+San Augustine	20200304	0
 San Jacinto	20200304	0
 San Patricio	20200304	0
 San Saba	20200304	0
@@ -456,8 +455,7 @@ Rockwall	20200305	0
 Runnels	20200305	0
 Rusk	20200305	0
 Sabine	20200305	0
-San
-Augustine	20200305	0
+San Augustine	20200305	0
 San Jacinto	20200305	0
 San Patricio	20200305	0
 San Saba	20200305	0
@@ -711,8 +709,7 @@ Rockwall	20200306	0
 Runnels	20200306	0
 Rusk	20200306	0
 Sabine	20200306	0
-San
-Augustine	20200306	0
+San Augustine	20200306	0
 San Jacinto	20200306	0
 San Patricio	20200306	0
 San Saba	20200306	0
@@ -966,8 +963,7 @@ Rockwall	20200309	0
 Runnels	20200309	0
 Rusk	20200309	0
 Sabine	20200309	0
-San
-Augustine	20200309	0
+San Augustine	20200309	0
 San Jacinto	20200309	0
 San Patricio	20200309	0
 San Saba	20200309	0
@@ -1221,8 +1217,7 @@ Rockwall	20200310	0
 Runnels	20200310	0
 Rusk	20200310	0
 Sabine	20200310	0
-San
-Augustine	20200310	0
+San Augustine	20200310	0
 San Jacinto	20200310	0
 San Patricio	20200310	0
 San Saba	20200310	0
@@ -1476,8 +1471,7 @@ Rockwall	20200311	0
 Runnels	20200311	0
 Rusk	20200311	0
 Sabine	20200311	0
-San
-Augustine	20200311	0
+San Augustine	20200311	0
 San Jacinto	20200311	0
 San Patricio	20200311	0
 San Saba	20200311	0
@@ -1731,8 +1725,7 @@ Rockwall	20200312	0
 Runnels	20200312	0
 Rusk	20200312	0
 Sabine	20200312	0
-San
-Augustine	20200312	0
+San Augustine	20200312	0
 San Jacinto	20200312	0
 San Patricio	20200312	0
 San Saba	20200312	0
@@ -1986,8 +1979,7 @@ Rockwall	20200313	0
 Runnels	20200313	0
 Rusk	20200313	0
 Sabine	20200313	0
-San
-Augustine	20200313	0
+San Augustine	20200313	0
 San Jacinto	20200313	0
 San Patricio	20200313	0
 San Saba	20200313	0
@@ -2241,8 +2233,7 @@ Rockwall	20200315	0
 Runnels	20200315	0
 Rusk	20200315	0
 Sabine	20200315	0
-San
-Augustine	20200315	0
+San Augustine	20200315	0
 San Jacinto	20200315	0
 San Patricio	20200315	0
 San Saba	20200315	0
@@ -2496,8 +2487,7 @@ Rockwall	20200316	0
 Runnels	20200316	0
 Rusk	20200316	0
 Sabine	20200316	0
-San
-Augustine	20200316	0
+San Augustine	20200316	0
 San Jacinto	20200316	0
 San Patricio	20200316	0
 San Saba	20200316	0
@@ -2751,8 +2741,7 @@ Rockwall	20200317	0
 Runnels	20200317	0
 Rusk	20200317	0
 Sabine	20200317	0
-San
-Augustine	20200317	0
+San Augustine	20200317	0
 San Jacinto	20200317	0
 San Patricio	20200317	0
 San Saba	20200317	0
@@ -3006,8 +2995,7 @@ Rockwall	20200318	0
 Runnels	20200318	0
 Rusk	20200318	1
 Sabine	20200318	0
-San
-Augustine	20200318	0
+San Augustine	20200318	0
 San Jacinto	20200318	0
 San Patricio	20200318	0
 San Saba	20200318	0
@@ -3261,8 +3249,7 @@ Rockwall	20200319	0
 Runnels	20200319	0
 Rusk	20200319	1
 Sabine	20200319	0
-San
-Augustine	20200319	0
+San Augustine	20200319	0
 San Jacinto	20200319	0
 San Patricio	20200319	0
 San Saba	20200319	0
@@ -3516,8 +3503,7 @@ Rockwall	20200320	0
 Runnels	20200320	0
 Rusk	20200320	1
 Sabine	20200320	0
-San
-Augustine	20200320	0
+San Augustine	20200320	0
 San Jacinto	20200320	0
 San Patricio	20200320	0
 San Saba	20200320	0
@@ -3771,8 +3757,7 @@ Rockwall	20200321	0
 Runnels	20200321	0
 Rusk	20200321	1
 Sabine	20200321	0
-San
-Augustine	20200321	0
+San Augustine	20200321	0
 San Jacinto	20200321	0
 San Patricio	20200321	0
 San Saba	20200321	0
@@ -4026,8 +4011,7 @@ Rockwall	20200322	0
 Runnels	20200322	0
 Rusk	20200322	1
 Sabine	20200322	0
-San
-Augustine	20200322	0
+San Augustine	20200322	0
 San Jacinto	20200322	0
 San Patricio	20200322	0
 San Saba	20200322	0
@@ -4281,8 +4265,7 @@ Rockwall	20200323	0
 Runnels	20200323	0
 Rusk	20200323	1
 Sabine	20200323	0
-San
-Augustine	20200323	0
+San Augustine	20200323	0
 San Jacinto	20200323	0
 San Patricio	20200323	0
 San Saba	20200323	0
@@ -4536,8 +4519,7 @@ Rockwall	20200324	0
 Runnels	20200324	0
 Rusk	20200324	1
 Sabine	20200324	0
-San
-Augustine	20200324	0
+San Augustine	20200324	0
 San Jacinto	20200324	0
 San Patricio	20200324	0
 San Saba	20200324	0
@@ -4791,8 +4773,7 @@ Rockwall	20200325	0
 Runnels	20200325	0
 Rusk	20200325	1
 Sabine	20200325	0
-San
-Augustine	20200325	0
+San Augustine	20200325	0
 San Jacinto	20200325	0
 San Patricio	20200325	0
 San Saba	20200325	0
@@ -5046,8 +5027,7 @@ Rockwall	20200326	2
 Runnels	20200326	0
 Rusk	20200326	2
 Sabine	20200326	0
-San
-Augustine	20200326	0
+San Augustine	20200326	0
 San Jacinto	20200326	0
 San Patricio	20200326	1
 San Saba	20200326	0
@@ -5301,8 +5281,7 @@ Rockwall	20200327	3
 Runnels	20200327	0
 Rusk	20200327	2
 Sabine	20200327	0
-San
-Augustine	20200327	0
+San Augustine	20200327	0
 San Jacinto	20200327	0
 San Patricio	20200327	1
 San Saba	20200327	0
@@ -5556,8 +5535,7 @@ Rockwall	20200328	3
 Runnels	20200328	0
 Rusk	20200328	2
 Sabine	20200328	0
-San
-Augustine	20200328	0
+San Augustine	20200328	0
 San Jacinto	20200328	0
 San Patricio	20200328	1
 San Saba	20200328	0
@@ -5811,8 +5789,7 @@ Rockwall	20200329	4
 Runnels	20200329	0
 Rusk	20200329	3
 Sabine	20200329	0
-San
-Augustine	20200329	0
+San Augustine	20200329	0
 San Jacinto	20200329	1
 San Patricio	20200329	1
 San Saba	20200329	0
@@ -6066,8 +6043,7 @@ Rockwall	20200330	4
 Runnels	20200330	0
 Rusk	20200330	3
 Sabine	20200330	0
-San
-Augustine	20200330	0
+San Augustine	20200330	0
 San Jacinto	20200330	1
 San Patricio	20200330	1
 San Saba	20200330	0
@@ -6321,8 +6297,7 @@ Rockwall	20200331	5
 Runnels	20200331	0
 Rusk	20200331	3
 Sabine	20200331	0
-San
-Augustine	20200331	0
+San Augustine	20200331	0
 San Jacinto	20200331	1
 San Patricio	20200331	1
 San Saba	20200331	0
@@ -6576,8 +6551,7 @@ Rockwall	20200401	9
 Runnels	20200401	0
 Rusk	20200401	5
 Sabine	20200401	0
-San
-Augustine	20200401	1
+San Augustine	20200401	1
 San Jacinto	20200401	1
 San Patricio	20200401	2
 San Saba	20200401	0
@@ -6831,8 +6805,7 @@ Rockwall	20200402	10
 Runnels	20200402	0
 Rusk	20200402	6
 Sabine	20200402	0
-San
-Augustine	20200402	1
+San Augustine	20200402	1
 San Jacinto	20200402	1
 San Patricio	20200402	2
 San Saba	20200402	0
@@ -7086,8 +7059,7 @@ Rockwall	20200403	10
 Runnels	20200403	0
 Rusk	20200403	7
 Sabine	20200403	0
-San
-Augustine	20200403	4
+San Augustine	20200403	4
 San Jacinto	20200403	1
 San Patricio	20200403	3
 San Saba	20200403	0
@@ -7341,8 +7313,7 @@ Rockwall	20200404	11
 Runnels	20200404	0
 Rusk	20200404	11
 Sabine	20200404	0
-San
-Augustine	20200404	4
+San Augustine	20200404	4
 San Jacinto	20200404	1
 San Patricio	20200404	4
 San Saba	20200404	0
@@ -7596,8 +7567,7 @@ Rockwall	20200405	10
 Runnels	20200405	0
 Rusk	20200405	12
 Sabine	20200405	0
-San
-Augustine	20200405	4
+San Augustine	20200405	4
 San Jacinto	20200405	1
 San Patricio	20200405	5
 San Saba	20200405	0
@@ -7851,8 +7821,7 @@ Rockwall	20200406	10
 Runnels	20200406	0
 Rusk	20200406	11
 Sabine	20200406	0
-San
-Augustine	20200406	4
+San Augustine	20200406	4
 San Jacinto	20200406	1
 San Patricio	20200406	2
 San Saba	20200406	0
@@ -8106,8 +8075,7 @@ Rockwall	20200407	11
 Runnels	20200407	0
 Rusk	20200407	12
 Sabine	20200407	0
-San
-Augustine	20200407	4
+San Augustine	20200407	4
 San Jacinto	20200407	1
 San Patricio	20200407	2
 San Saba	20200407	0
@@ -8361,8 +8329,7 @@ Rockwall	20200408	14
 Runnels	20200408	0
 Rusk	20200408	14
 Sabine	20200408	0
-San
-Augustine	20200408	4
+San Augustine	20200408	4
 San Jacinto	20200408	3
 San Patricio	20200408	7
 San Saba	20200408	0
@@ -8616,8 +8583,7 @@ Rockwall	20200409	14
 Runnels	20200409	0
 Rusk	20200409	14
 Sabine	20200409	0
-San
-Augustine	20200409	7
+San Augustine	20200409	7
 San Jacinto	20200409	3
 San Patricio	20200409	7
 San Saba	20200409	0
@@ -8871,8 +8837,7 @@ Rockwall	20200410	16
 Runnels	20200410	0
 Rusk	20200410	14
 Sabine	20200410	0
-San
-Augustine	20200410	9
+San Augustine	20200410	9
 San Jacinto	20200410	3
 San Patricio	20200410	7
 San Saba	20200410	0
@@ -9126,8 +9091,7 @@ Rockwall	20200411	20
 Runnels	20200411	0
 Rusk	20200411	14
 Sabine	20200411	0
-San
-Augustine	20200411	9
+San Augustine	20200411	9
 San Jacinto	20200411	5
 San Patricio	20200411	7
 San Saba	20200411	0
@@ -9381,8 +9345,7 @@ Rockwall	20200412	20
 Runnels	20200412	0
 Rusk	20200412	16
 Sabine	20200412	0
-San
-Augustine	20200412	9
+San Augustine	20200412	9
 San Jacinto	20200412	5
 San Patricio	20200412	7
 San Saba	20200412	0
@@ -9636,8 +9599,7 @@ Rockwall	20200413	22
 Runnels	20200413	0
 Rusk	20200413	15
 Sabine	20200413	0
-San
-Augustine	20200413	9
+San Augustine	20200413	9
 San Jacinto	20200413	7
 San Patricio	20200413	7
 San Saba	20200413	0
@@ -9891,8 +9853,7 @@ Rockwall	20200414	24
 Runnels	20200414	0
 Rusk	20200414	16
 Sabine	20200414	0
-San
-Augustine	20200414	9
+San Augustine	20200414	9
 San Jacinto	20200414	8
 San Patricio	20200414	9
 San Saba	20200414	0
@@ -10146,8 +10107,7 @@ Rockwall	20200415	30
 Runnels	20200415	0
 Rusk	20200415	17
 Sabine	20200415	0
-San
-Augustine	20200415	9
+San Augustine	20200415	9
 San Jacinto	20200415	7
 San Patricio	20200415	8
 San Saba	20200415	0
@@ -10401,8 +10361,7 @@ Rockwall	20200416	30
 Runnels	20200416	0
 Rusk	20200416	24
 Sabine	20200416	1
-San
-Augustine	20200416	11
+San Augustine	20200416	11
 San Jacinto	20200416	10
 San Patricio	20200416	8
 San Saba	20200416	0
@@ -10656,8 +10615,7 @@ Rockwall	20200417	32
 Runnels	20200417	0
 Rusk	20200417	25
 Sabine	20200417	1
-San
-Augustine	20200417	14
+San Augustine	20200417	14
 San Jacinto	20200417	10
 San Patricio	20200417	8
 San Saba	20200417	0
@@ -10911,8 +10869,7 @@ Rockwall	20200418	34
 Runnels	20200418	0
 Rusk	20200418	27
 Sabine	20200418	1
-San
-Augustine	20200418	14
+San Augustine	20200418	14
 San Jacinto	20200418	8
 San Patricio	20200418	8
 San Saba	20200418	0
@@ -11166,8 +11123,7 @@ Rockwall	20200419	34
 Runnels	20200419	0
 Rusk	20200419	27
 Sabine	20200419	1
-San
-Augustine	20200419	14
+San Augustine	20200419	14
 San Jacinto	20200419	8
 San Patricio	20200419	8
 San Saba	20200419	0
@@ -11421,8 +11377,7 @@ Rockwall	20200420	36
 Runnels	20200420	0
 Rusk	20200420	27
 Sabine	20200420	1
-San
-Augustine	20200420	14
+San Augustine	20200420	14
 San Jacinto	20200420	8
 San Patricio	20200420	8
 San Saba	20200420	0
@@ -11676,8 +11631,7 @@ Rockwall	20200421	40
 Runnels	20200421	0
 Rusk	20200421	27
 Sabine	20200421	1
-San
-Augustine	20200421	14
+San Augustine	20200421	14
 San Jacinto	20200421	8
 San Patricio	20200421	8
 San Saba	20200421	0
@@ -11931,8 +11885,7 @@ Rockwall	20200422	48
 Runnels	20200422	0
 Rusk	20200422	28
 Sabine	20200422	1
-San
-Augustine	20200422	14
+San Augustine	20200422	14
 San Jacinto	20200422	8
 San Patricio	20200422	9
 San Saba	20200422	0
@@ -12186,8 +12139,7 @@ Rockwall	20200423	48
 Runnels	20200423	0
 Rusk	20200423	28
 Sabine	20200423	1
-San
-Augustine	20200423	15
+San Augustine	20200423	15
 San Jacinto	20200423	8
 San Patricio	20200423	11
 San Saba	20200423	0
@@ -12441,8 +12393,7 @@ Rockwall	20200424	49
 Runnels	20200424	0
 Rusk	20200424	30
 Sabine	20200424	1
-San
-Augustine	20200424	16
+San Augustine	20200424	16
 San Jacinto	20200424	8
 San Patricio	20200424	11
 San Saba	20200424	0
@@ -12696,8 +12647,7 @@ Rockwall	20200425	51
 Runnels	20200425	0
 Rusk	20200425	30
 Sabine	20200425	1
-San
-Augustine	20200425	16
+San Augustine	20200425	16
 San Jacinto	20200425	8
 San Patricio	20200425	12
 San Saba	20200425	0
@@ -12951,8 +12901,7 @@ Rockwall	20200426	51
 Runnels	20200426	0
 Rusk	20200426	32
 Sabine	20200426	1
-San
-Augustine	20200426	16
+San Augustine	20200426	16
 San Jacinto	20200426	9
 San Patricio	20200426	12
 San Saba	20200426	0
@@ -13206,8 +13155,7 @@ Rockwall	20200427	56
 Runnels	20200427	0
 Rusk	20200427	32
 Sabine	20200427	1
-San
-Augustine	20200427	16
+San Augustine	20200427	16
 San Jacinto	20200427	9
 San Patricio	20200427	12
 San Saba	20200427	0
@@ -13461,8 +13409,7 @@ Rockwall	20200428	58
 Runnels	20200428	1
 Rusk	20200428	33
 Sabine	20200428	1
-San
-Augustine	20200428	16
+San Augustine	20200428	16
 San Jacinto	20200428	9
 San Patricio	20200428	13
 San Saba	20200428	0
@@ -13716,8 +13663,7 @@ Rockwall	20200429	75
 Runnels	20200429	1
 Rusk	20200429	33
 Sabine	20200429	1
-San
-Augustine	20200429	16
+San Augustine	20200429	16
 San Jacinto	20200429	9
 San Patricio	20200429	12
 San Saba	20200429	0
@@ -13971,8 +13917,7 @@ Rockwall	20200430	75
 Runnels	20200430	1
 Rusk	20200430	35
 Sabine	20200430	1
-San
-Augustine	20200430	16
+San Augustine	20200430	16
 San Jacinto	20200430	9
 San Patricio	20200430	12
 San Saba	20200430	0
@@ -14226,8 +14171,7 @@ Rockwall	20200501	75
 Runnels	20200501	1
 Rusk	20200501	36
 Sabine	20200501	1
-San
-Augustine	20200501	19
+San Augustine	20200501	19
 San Jacinto	20200501	9
 San Patricio	20200501	12
 San Saba	20200501	0
@@ -14481,8 +14425,7 @@ Rockwall	20200502	85
 Runnels	20200502	2
 Rusk	20200502	36
 Sabine	20200502	1
-San
-Augustine	20200502	19
+San Augustine	20200502	19
 San Jacinto	20200502	10
 San Patricio	20200502	12
 San Saba	20200502	0
@@ -14736,8 +14679,7 @@ Rockwall	20200503	85
 Runnels	20200503	2
 Rusk	20200503	36
 Sabine	20200503	1
-San
-Augustine	20200503	19
+San Augustine	20200503	19
 San Jacinto	20200503	10
 San Patricio	20200503	12
 San Saba	20200503	0
@@ -14991,8 +14933,7 @@ Rockwall	20200504	88
 Runnels	20200504	2
 Rusk	20200504	36
 Sabine	20200504	1
-San
-Augustine	20200504	19
+San Augustine	20200504	19
 San Jacinto	20200504	10
 San Patricio	20200504	13
 San Saba	20200504	0
@@ -15246,8 +15187,7 @@ Rockwall	20200505	91
 Runnels	20200505	2
 Rusk	20200505	38
 Sabine	20200505	1
-San
-Augustine	20200505	19
+San Augustine	20200505	19
 San Jacinto	20200505	10
 San Patricio	20200505	13
 San Saba	20200505	0
@@ -15501,8 +15441,7 @@ Rockwall	20200506	95
 Runnels	20200506	2
 Rusk	20200506	39
 Sabine	20200506	1
-San
-Augustine	20200506	21
+San Augustine	20200506	21
 San Jacinto	20200506	10
 San Patricio	20200506	14
 San Saba	20200506	0
@@ -15756,8 +15695,7 @@ Rockwall	20200507	96
 Runnels	20200507	2
 Rusk	20200507	40
 Sabine	20200507	2
-San
-Augustine	20200507	21
+San Augustine	20200507	21
 San Jacinto	20200507	10
 San Patricio	20200507	16
 San Saba	20200507	0
