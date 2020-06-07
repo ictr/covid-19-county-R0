@@ -3,7 +3,10 @@ library("readxl")
 setwd("/mount/ictr1/chenglab/cytong/github-project/covid-19-county-R0/TSHS_CaseCountData/")
 my_data = read_excel("Texas COVID-19 Case Count Data by County.xlsx", skip=2, col_names=T, n_max=254)
 
-DATE = paste0("2020",gsub(x=colnames(my_data)[grep(x=colnames(my_data), pattern="Cases")], pattern="Cases\r\n|Cases\r\n\r\n|-", replacement=""))
+library(stringr)
+#DATE = paste0("2020",gsub(x=colnames(my_data)[grep(x=colnames(my_data), pattern="Cases")], pattern="Cases\r\n|Cases\r\n\r\n|-", replacement=""))
+DATE = paste0("2020",str_match(string=colnames(my_data)[grep(x=colnames(my_data), pattern="Cases")], pattern="(\\d+-\\d+)$")[,2])
+DATE = gsub(x = DATE, pattern = "-", replacement = "")
 colnames(my_data)[grep(x=colnames(my_data), pattern="Cases")] = DATE
 
 my_data = my_data[, -2]
