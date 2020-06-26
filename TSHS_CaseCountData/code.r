@@ -1,6 +1,6 @@
 rm(list=ls())
 library("readxl")
-setwd("/mount/ictr1/chenglab/cytong/github-project/covid-19-county-R0/TSHS_CaseCountData/")
+setwd("~/github_project/covid-19-county-R0/TSHS_CaseCountData/")
 my_data = read_excel("Texas COVID-19 Case Count Data by County.xlsx", skip=2, col_names=T, n_max=254)
 
 library(stringr)
