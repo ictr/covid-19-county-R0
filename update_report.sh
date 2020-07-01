@@ -29,7 +29,7 @@ fi
 # process data
 docker run --rm -it -v $(pwd):/covid-19-county-R0 covid19-r0 sh -c 'cd /covid-19-county-R0/TSHS_CaseCountData; Rscript code.r' 
 docker run --rm -it -v $(pwd):/covid-19-county-R0 covid19-r0 sh -c 'cd /covid-19-county-R0/; papermill "Realtime R0.ipynb" Realtime_updated.ipynb'
-docker run --rm -it -v $(pwd):/covid-19-county-R0 covid19-r0 sh -c 'cd /covid-19-county-R0/; jupyter nbconvert --to html  /covid-19-county-R0/Realtime_updated.ipynb
+docker run --rm -it -v $(pwd):/covid-19-county-R0 covid19-r0 sh -c 'cd /covid-19-county-R0/; jupyter nbconvert --to html Realtime_updated.ipynb'
 mv Realtime_updated.ipynb "Realtime R0.ipynb"
 mv Realtime_updated.html "Realtime R0.html"
 
