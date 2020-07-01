@@ -7,13 +7,14 @@ echo "Download data"
 wget -q $URL -O "$datafile"
 
 # calculate md5
-newsum=$(md5 "$datafile")
+newsum=$(md5sum "$datafile")
 
 # create md5 if not exist
 [ -f $sumfile ] || touch $sumfile
 
 # check if md5 exists
-if grep -q "$newsum" $sumfile; then
+result=`md5sum -c --quiet $sumfile`
+if $result ; then
   echo "Data has not been changed"
   exit 0
 else
@@ -31,7 +32,8 @@ docker run --rm -it -v $(pwd):/covid-19-county-R0 covid19-r0 sh -c 'cd /covid-19
 docker run --rm -it -v $(pwd):/covid-19-county-R0 covid19-r0 sh -c 'cd /covid-19-county-R0/; papermill "Realtime R0.ipynb" Realtime_updated.ipynb'
 docker run --rm -it -v $(pwd):/covid-19-county-R0 covid19-r0 sh -c 'cd /covid-19-county-R0/; jupyter nbconvert --to html Realtime_updated.ipynb'
 mv Realtime_updated.ipynb "Realtime R0.ipynb"
-mv Realtime_updated.html "Realtime R0.html"
+## mv Realtime_updated.html "Realtime R0.html"
+mv Realtime_updated.html "/var/www/web/sites/default/files/r0.html"
 
 # git push
 #
