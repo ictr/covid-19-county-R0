@@ -1,8 +1,7 @@
 #!/bin/sh
 URL=https://www.dshs.state.tx.us/coronavirus/TexasCOVID19DailyCountyCaseCountData.xlsx
-HOME=/usr/share/httpd
-BASE=$HOME/covid-19-county-R0
-cd $BASE
+# change to the current directory of the script
+cd "${0%/*}"
 datafile="TSHS_CaseCountData/Texas COVID-19 Case Count Data by County.xlsx"
 sumfile=TSHS_CaseCountData/data.md5
 
