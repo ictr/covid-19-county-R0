@@ -1,4 +1,8 @@
+#!/bin/sh
 URL=https://www.dshs.state.tx.us/coronavirus/TexasCOVID19DailyCountyCaseCountData.xlsx
+HOME=/usr/share/httpd
+BASE=$HOME/covid-19-county-R0
+cd $BASE
 datafile="TSHS_CaseCountData/Texas COVID-19 Case Count Data by County.xlsx"
 sumfile=TSHS_CaseCountData/data.md5
 
@@ -10,17 +14,16 @@ wget -q $URL -O "$datafile"
 newsum=$(md5sum "$datafile")
 
 # create md5 if not exist
-[ -f $sumfile ] || touch $sumfile
-
-# check if md5 exists
-result=`md5sum -c --quiet $sumfile`
-if $result ; then
-  echo "Data has not been changed"
-  exit 0
-else
-  echo $newsum > $sumfile
-  echo "Update md5 file"
+if [ -f $sumfile ]; then
+    result=`md5sum -c  --quiet $sumfile`
+    if [ "$result" == "" ] ; then
+      echo "Data has not been changed"
+      exit 0
+    fi
 fi
+
+echo $newsum > $sumfile
+echo "Update md5 file"
 
 # build docker image if has not existed
 if [[ "$(docker images -q covid19-r0 2> /dev/null)" == "" ]]; then
@@ -30,11 +33,11 @@ fi
 # process data
 docker run --rm -it -v $(pwd):/covid-19-county-R0 covid19-r0 sh -c 'cd /covid-19-county-R0/TSHS_CaseCountData; Rscript code.r' 
 docker run --rm -it -v $(pwd):/covid-19-county-R0 covid19-r0 sh -c 'cd /covid-19-county-R0/; papermill "Realtime R0.ipynb" Realtime_updated.ipynb'
+
+# update title with the current date and convert to HTML file
+sed -iE "s/in Real-Time \(Until .+\)/in Real-Time \(Until $(date +"%b %d")\)/" Realtime_updated.ipynb
 docker run --rm -it -v $(pwd):/covid-19-county-R0 covid19-r0 sh -c 'cd /covid-19-county-R0/; jupyter nbconvert --to html Realtime_updated.ipynb'
-mv Realtime_updated.ipynb "Realtime R0.ipynb"
-## mv Realtime_updated.html "Realtime R0.html"
+
+# move updated HTML file to webserver
 mv Realtime_updated.html "/var/www/web/sites/default/files/r0.html"
 
-# git push
-#
-# COPY TO WEBSERVER
