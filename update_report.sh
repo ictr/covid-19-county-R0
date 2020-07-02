@@ -34,7 +34,7 @@ docker run --rm -it -v $(pwd):/covid-19-county-R0 covid19-r0 sh -c 'cd /covid-19
 docker run --rm -it -v $(pwd):/covid-19-county-R0 covid19-r0 sh -c 'cd /covid-19-county-R0/; papermill "Realtime R0.ipynb" Realtime_updated.ipynb'
 
 # update title with the current date and convert to HTML file
-sed -iE "s/in Real-Time \(Until .+\)/in Real-Time \(Until $(date +"%b %d")\)/" Realtime_updated.ipynb
+sed -i -E "s/in Real-Time \(Until .+\)/in Real-Time \(Until $(date +"%b %d")\)/" Realtime_updated.ipynb
 docker run --rm -it -v $(pwd):/covid-19-county-R0 covid19-r0 sh -c 'cd /covid-19-county-R0/; jupyter nbconvert --to html Realtime_updated.ipynb'
 
 # move updated HTML file to webserver
