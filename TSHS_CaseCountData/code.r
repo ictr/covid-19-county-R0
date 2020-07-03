@@ -5,7 +5,7 @@ my_data = read_excel("Texas COVID-19 Case Count Data by County.xlsx", skip=2, co
 
 library(stringr)
 #DATE = paste0("2020",gsub(x=colnames(my_data)[grep(x=colnames(my_data), pattern="Cases")], pattern="Cases\r\n|Cases\r\n\r\n|-", replacement=""))
-DATE = paste0("2020",str_match(string=colnames(my_data)[grep(x=colnames(my_data), pattern="Cases")], pattern="(\\d+-\\d+)$")[,2])
+DATE = paste0("2020",str_match(string=colnames(my_data)[grep(x=colnames(my_data), pattern="Cases")], pattern="(\\d+-\\d+)")[,2])
 DATE = gsub(x = DATE, pattern = "-", replacement = "")
 colnames(my_data)[grep(x=colnames(my_data), pattern="Cases")] = DATE
 
