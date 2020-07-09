@@ -34,7 +34,7 @@ docker run --rm -i -v $(pwd):/covid-19-county-R0 covid19-r0-sos sh -c 'cd /covid
 docker run --rm -i -v $(pwd):/covid-19-county-R0 covid19-r0-sos sh -c 'cd /covid-19-county-R0/; papermill --engine sos "Realtime R0_sos.ipynb" Realtime_updated.ipynb'
 
 # update title with the current date and convert to HTML file
-sed -i -E "s/in Real-Time \(Until .+\)/in Real-Time \(Until $(date +"%b %d")\)/" Realtime_updated.ipynb
+sed -i -E "s/in Texas \(Until .+\)/in Texas \(Until $(date +"%b %d")\)/" Realtime_updated.ipynb
 docker run --rm -i -v $(pwd):/covid-19-county-R0 covid19-r0-sos sh -c 'cd /covid-19-county-R0/; sos convert Realtime_updated.ipynb Realtime_updated.html --template sos-report-only'
 
 # move updated HTML file to webserver
