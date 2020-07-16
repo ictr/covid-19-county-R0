@@ -40,4 +40,4 @@ docker run --rm -i -v $(pwd):/covid-19-county-R0 covid19-r0-sos sh -c 'cd /covid
 # move updated HTML file to webserver
 git commit . -m 'Update report'
 git push
-mv Realtime_updated.html "/var/www/web/sites/default/files/r0.html"
+cp index.html "/var/www/web/sites/default/files/r0.html"
