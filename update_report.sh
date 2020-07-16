@@ -35,7 +35,9 @@ docker run --rm -i -v $(pwd):/covid-19-county-R0 covid19-r0-sos sh -c 'cd /covid
 
 # update title with the current date and convert to HTML file
 sed -i -E "s/in Texas \(Until .+\)/in Texas \(Until $(date +"%b %d")\)/" Realtime_updated.ipynb
-docker run --rm -i -v $(pwd):/covid-19-county-R0 covid19-r0-sos sh -c 'cd /covid-19-county-R0/; sos convert Realtime_updated.ipynb Realtime_updated.html --template sos-report-only'
+docker run --rm -i -v $(pwd):/covid-19-county-R0 covid19-r0-sos sh -c 'cd /covid-19-county-R0/; sos convert Realtime_updated.ipynb index.html --template sos-report-only'
 
 # move updated HTML file to webserver
+git commit . -m 'Update report'
+git push
 mv Realtime_updated.html "/var/www/web/sites/default/files/r0.html"
