@@ -15,8 +15,13 @@ wget -q $URL -O "$datafile"
 git pull
 
 # calculate md5
-newsum=$(md5sum "$datafile")
-newtmcsum=$(md5sum "$tmcdatafile")
+if [ -x "$(command -v md5sum)" ]; then
+  newsum=$(md5sum "$datafile")
+  newtmcsum=$(md5sum "$tmcdatafile")
+else
+  newsum=$(md5 "$datafile")
+  newtmcsum=$(md5 "$tmcdatafile")
+fi
 
 # create md5 if not exist
 if [ -f $sumfile ]; then
@@ -42,10 +47,10 @@ docker run --rm -i -v $(pwd):/covid-19-county-R0 covid19-r0-sos sh -c 'cd /covid
 docker run --rm -i -v $(pwd):/covid-19-county-R0 covid19-r0-sos sh -c 'cd /covid-19-county-R0/; papermill --progress-bar --engine sos "Realtime R0_sos.ipynb" Realtime_updated.ipynb -p param_days 10 -p param_std 2.2 -p param_sigma 0.05'
 
 # update title with the current date and convert to HTML file
-sed -i -E "s/in Texas \(Until .+\)/in Texas \(Until $(date +"%b %d")\)/" Realtime_updated.ipynb
+sed -i.bak -E "s/in Texas \(Until .+\)/in Texas \(Until $(date +"%b %d")\)/" Realtime_updated.ipynb
 docker run --rm -i -v $(pwd):/covid-19-county-R0 covid19-r0-sos sh -c 'cd /covid-19-county-R0/; sos convert Realtime_updated.ipynb index.html --template sos-report-only'
 
 # move updated HTML file to webserver
 git commit . -m 'Update report'
 git push
-cp index.html "/var/www/web/sites/default/files/r0.html"
+[ -d /var/www/web/sites/default/files ] && cp index.html "/var/www/web/sites/default/files/r0.html"
