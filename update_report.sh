@@ -5,7 +5,7 @@ cd "${0%/*}"
 datafile="TSHS_CaseCountData/Texas COVID-19 Case Count Data by County.xlsx"
 tmcdatafile="TMC/Total Tests by Date and Source.xlsx"
 sumfile=TSHS_CaseCountData/data.md5
-tmcsumfile=TSHS_CaseCountData/tmcdata.md5
+tmcsumfile=TMC/data.md5
 
 # first get the file
 echo "Download data"
@@ -24,7 +24,7 @@ else
 fi
 
 # create md5 if not exist
-if [ -f $sumfile ]; then
+if [ -f $sumfile ] && [ -f $tmcsumfile ]; then
     result=`md5sum -c  --quiet $sumfile`
     tmcresult=`md5sum -c  --quiet $tmcsumfile`
     if [ "$result" == "" ]  && [ "$tmcresult" == "" ] ; then
@@ -34,6 +34,7 @@ if [ -f $sumfile ]; then
 fi
 
 echo $newsum > $sumfile
+echo $newtmcsum > $tmcsumfile
 echo "Update md5 file"
 
 # build docker image if has not existed
