@@ -22,7 +22,7 @@ newtmcsum=$(md5sum "$tmcdatafile")
 if [ -f $sumfile ]; then
     result=`md5sum -c  --quiet $sumfile`
     tmcresult=`md5sum -c  --quiet $tmcsumfile`
-    if [ "$result" == "" && "$tmcresult" == "" ] ; then
+    if [ "$result" == "" ]  && [ "$tmcresult" == "" ] ; then
       echo "Data has not been changed"
       exit 0
     fi
