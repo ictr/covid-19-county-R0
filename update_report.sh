@@ -5,7 +5,7 @@ cd "${0%/*}"
 datafile="TSHS_CaseCountData/Texas COVID-19 Case Count Data by County.xlsx"
 tmcdatafile="TMC/Total Tests by Date and Source.xlsx"
 sumfile=TSHS_CaseCountData/data.md5
-tmcsumfile=TSHS_CaseCountData/tmcdata.md5
+tmcsumfile=TMC/data.md5
 
 # first get the file
 echo "Download data"
@@ -24,7 +24,7 @@ else
 fi
 
 # create md5 if not exist
-if [ -f $sumfile ]; then
+if [ -f $sumfile ] && [ -f $tmcsumfile ]; then
     result=`md5sum -c  --quiet $sumfile`
     tmcresult=`md5sum -c  --quiet $tmcsumfile`
     if [ "$result" == "" ]  && [ "$tmcresult" == "" ] ; then
@@ -34,6 +34,7 @@ if [ -f $sumfile ]; then
 fi
 
 echo $newsum > $sumfile
+echo $newtmcsum > $tmcsumfile
 echo "Update md5 file"
 
 # build docker image if has not existed
@@ -44,7 +45,7 @@ fi
 
 # process data
 docker run --rm -i -v $(pwd):/covid-19-county-R0 covid19-r0-sos sh -c 'cd /covid-19-county-R0/TSHS_CaseCountData; Rscript code.r'
-docker run --rm -i -v $(pwd):/covid-19-county-R0 covid19-r0-sos sh -c 'cd /covid-19-county-R0/; papermill --progress-bar --engine sos "Realtime R0_sos.ipynb" Realtime_updated.ipynb -p param_days 10 -p param_std 2.2 -p param_sigma 0.05'
+docker run --rm -i -v $(pwd):/covid-19-county-R0 covid19-r0-sos sh -c 'cd /covid-19-county-R0/; papermill --progress-bar --engine sos "Realtime R0_sos.ipynb" Realtime_updated.ipynb -p param_days 10 -p param_std 2.2 -p param_sigma 0.08'
 
 # update title with the current date and convert to HTML file
 sed -i.bak -E "s/in Texas \(Until .+\)/in Texas \(Until $(date +"%b %d")\)/" Realtime_updated.ipynb
