@@ -1,7 +1,7 @@
 #!/bin/sh
 URL=https://www.dshs.state.tx.us/coronavirus/TexasCOVID19DailyCountyCaseCountData.xlsx
 # change to the current directory of the script
-#cd "${0%/*}"
+cd "${0%/*}"
 datafile="TSHS_CaseCountData/Texas COVID-19 Case Count Data by County.xlsx"
 tmcdatafile="TMC/Total Tests by Date and Source.xlsx"
 sumfile=TSHS_CaseCountData/data.md5
