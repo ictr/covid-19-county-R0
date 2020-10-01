@@ -13,6 +13,15 @@ my_data = my_data[, -2]
 colnames(my_data)[1] = "county"
 my_data = as.data.frame(my_data)
 
+# calculate new daily cases after Sept.29th
+sept.29 = which(colnames(my_data) == "20200929")
+## daily new cases dataframe
+daily_new_cases = data.frame(matrix(nrow = 254, ncol = (ncol(my_data) - sept.29)))
+colnames(daily_new_cases) = colnames(my_data)[(sept.29+1):ncol(my_data)]
+for(i in 1:(ncol(my_data)-sept.29)){
+  daily_new_cases[,i] = my_data[,sept.29+i] - my_data[,sept.29+i-1]
+}
+
 # read new county data
 new_data = read_excel("DSHS New County Data.xlsx", col_names=T, n_max=9)
 new_data_date = seq(20200901,20200929,1)
@@ -20,8 +29,6 @@ colnames(new_data) = c("county", new_data_date)
 new_data = as.data.frame(new_data)
 
 counties = unique(my_data$county)
-
-my_data$`20200929` = my_data$`20200928`
 
 for(i in 1:length(counties)){
   county = counties[i]
@@ -40,6 +47,12 @@ for(i in 1:length(counties)){
   }
   my_data[which(my_data$county == county),] = my_data_county
 }
+
+# update data after Sept.29th
+for(i in 1:(ncol(my_data)-sept.29)){
+  my_data[,sept.29+i] = my_data[,sept.29+i-1] + daily_new_cases[,i]
+}
+
 
 library(reshape2)
 my_data = melt(my_data)
