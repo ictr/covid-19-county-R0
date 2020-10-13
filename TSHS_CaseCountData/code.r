@@ -13,18 +13,20 @@ my_data = my_data[, -2]
 colnames(my_data)[1] = "county"
 my_data = as.data.frame(my_data)
 
-# calculate new daily cases after Sept.29th
-sept.29 = which(colnames(my_data) == "20200929")
+# calculate new daily cases after OCt.11th
+oct.11 = which(colnames(my_data) == "20201011")
 ## daily new cases dataframe
-daily_new_cases = data.frame(matrix(nrow = 254, ncol = (ncol(my_data) - sept.29)))
-colnames(daily_new_cases) = colnames(my_data)[(sept.29+1):ncol(my_data)]
-for(i in 1:(ncol(my_data)-sept.29)){
-  daily_new_cases[,i] = my_data[,sept.29+i] - my_data[,sept.29+i-1]
+daily_new_cases = data.frame(matrix(nrow = 254, ncol = (ncol(my_data) - oct.11)))
+colnames(daily_new_cases) = colnames(my_data)[(oct.11+1):ncol(my_data)]
+for(i in 1:(ncol(my_data)-oct.11)){
+  daily_new_cases[,i] = my_data[,oct.11+i] - my_data[,oct.11+i-1]
 }
 
 # read new county data
 new_data = read_excel("DSHS New County Data.xlsx", col_names=T, n_max=9)
-new_data_date = seq(20200901,20200929,1)
+new_data_date = seq(20200901,20200930,1)
+new_data_date_oct = seq(20201001,20201011,1)
+new_data_date = append(new_data_date, new_data_date_oct)
 colnames(new_data) = c("county", new_data_date)
 new_data = as.data.frame(new_data)
 
@@ -37,20 +39,19 @@ for(i in 1:length(counties)){
   if(nrow(new_data_county) == 0){
     next
   } else {
-    for(j in 2:29){
+    for(j in 2:ncol(new_data)){
       date = colnames(new_data_county[j])
       current = which(colnames(my_data_county) == date)
       previous = current - 1
       my_data_county[1,current] =  my_data_county[1,previous] + new_data_county[1,j]
     }
-    my_data_county$`20200929` = my_data_county$`20200928` + new_data_county[1,30]
   }
   my_data[which(my_data$county == county),] = my_data_county
 }
 
-# update data after Sept.29th
-for(i in 1:(ncol(my_data)-sept.29)){
-  my_data[,sept.29+i] = my_data[,sept.29+i-1] + daily_new_cases[,i]
+# update data after Oct.11th
+for(i in 1:(ncol(my_data)-oct.11)){
+  my_data[,oct.11+i] = my_data[,oct.11+i-1] + daily_new_cases[,i]
 }
 
 
