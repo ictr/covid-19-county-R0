@@ -13,21 +13,21 @@ my_data = my_data[, -2]
 colnames(my_data)[1] = "county"
 my_data = as.data.frame(my_data)
 
-# calculate new daily cases after OCt.19th
-oct.19 = which(colnames(my_data) == "20201019")
+# calculate new daily cases after OCt.25th
+oct.25 = which(colnames(my_data) == "20201025")
 ## daily new cases dataframe
-if((ncol(my_data)-oct.19) >= 1){
-  daily_new_cases = data.frame(matrix(nrow = 254, ncol = (ncol(my_data) - oct.19)))
-  colnames(daily_new_cases) = colnames(my_data)[(oct.19+1):ncol(my_data)]
-  for(i in 1:(ncol(my_data)-oct.19)){
-    daily_new_cases[,i] = my_data[,oct.19+i] - my_data[,oct.19+i-1]
+if((ncol(my_data)-oct.25) >= 1){
+  daily_new_cases = data.frame(matrix(nrow = 254, ncol = (ncol(my_data) - oct.25)))
+  colnames(daily_new_cases) = colnames(my_data)[(oct.25+1):ncol(my_data)]
+  for(i in 1:(ncol(my_data)-oct.25)){
+    daily_new_cases[,i] = my_data[,oct.25+i] - my_data[,oct.25+i-1]
   }
 }
 
 # read new county data
 new_data = read_excel("DSHS New County Data.xlsx", col_names=T, n_max=9)
 new_data_date = seq(20200901,20200930,1)
-new_data_date_oct = seq(20201001,20201019,1)
+new_data_date_oct = seq(20201001,20201025,1)
 new_data_date = append(new_data_date, new_data_date_oct)
 colnames(new_data) = c("county", new_data_date)
 new_data = as.data.frame(new_data)
@@ -51,10 +51,10 @@ for(i in 1:length(counties)){
   my_data[which(my_data$county == county),] = my_data_county
 }
 
-# update data after Oct.19th
-if((ncol(my_data)-oct.19) >= 1){
-  for(i in 1:(ncol(my_data)-oct.19)){
-    my_data[,oct.19+i] = my_data[,oct.19+i-1] + daily_new_cases[,i]
+# update data after Oct.25th
+if((ncol(my_data)-oct.25) >= 1){
+  for(i in 1:(ncol(my_data)-oct.25)){
+    my_data[,oct.25+i] = my_data[,oct.25+i-1] + daily_new_cases[,i]
   }
 }
 
