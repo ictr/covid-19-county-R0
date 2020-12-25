@@ -14,7 +14,7 @@ colnames(my_data)[1] = "county"
 my_data = as.data.frame(my_data)
 
 # calculate new daily cases after specified days
-selected_date = which(colnames(my_data) == "20201104")
+selected_date = which(colnames(my_data) == "20201224")
 ## daily new cases dataframe
 if((ncol(my_data)-selected_date) >= 1){
   daily_new_cases = data.frame(matrix(nrow = 254, ncol = (ncol(my_data) - selected_date)))
@@ -28,9 +28,11 @@ if((ncol(my_data)-selected_date) >= 1){
 new_data = read_excel("DSHS New County Data.xlsx", col_names=T, n_max=9)
 new_data_date = seq(20200901,20200930,1)
 new_data_date_oct = seq(20201001,20201031,1)
-new_data_date_nov = seq(20201101,20201104,1)
+new_data_date_nov = seq(20201101,20201130,1)
+new_data_date_dec = seq(20201201,20201224,1)
 new_data_date = append(new_data_date, new_data_date_oct)
 new_data_date = append(new_data_date, new_data_date_nov)
+new_data_date = append(new_data_date, new_data_date_dec)
 colnames(new_data) = c("county", new_data_date)
 new_data = as.data.frame(new_data)
 
