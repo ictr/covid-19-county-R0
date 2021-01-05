@@ -6,15 +6,21 @@ my_data = read_excel("Texas COVID-19 Case Count Data by County.xlsx", skip=2, co
 library(stringr)
 #DATE = paste0("2020",gsub(x=colnames(my_data)[grep(x=colnames(my_data), pattern="Cases")], pattern="Cases\r\n|Cases\r\n\r\n|-", replacement=""))
 DATE = paste0("2020",str_match(string=colnames(my_data)[grep(x=colnames(my_data), pattern="Cases")], pattern="(\\d+-\\d+)")[,2])
+DATE[301:(ncol(my_data)-1)] = paste0("2021",str_match(string=colnames(my_data[,302:ncol(my_data)])[grep(x=colnames(my_data[,302:ncol(my_data)]), pattern="Cases")], pattern="(\\d+-\\d+)")[,2])
 DATE = gsub(x = DATE, pattern = "-", replacement = "")
 colnames(my_data)[grep(x=colnames(my_data), pattern="Cases")] = DATE
 
-my_data = my_data[, -2]
+my_data = my_data[, -c(2,305)]
 colnames(my_data)[1] = "county"
 my_data = as.data.frame(my_data)
 
+gap = round((my_data[,303] - my_data[,297])/7)
+for(i in 297:ncol(my_data)){
+  my_data[,i] = my_data[,i-1] + gap
+}
+
 # calculate new daily cases after specified days
-selected_date = which(colnames(my_data) == "20201227")
+selected_date = which(colnames(my_data) == "20210103")
 ## daily new cases dataframe
 if((ncol(my_data)-selected_date) >= 1){
   daily_new_cases = data.frame(matrix(nrow = 254, ncol = (ncol(my_data) - selected_date)))
@@ -29,12 +35,25 @@ new_data = read_excel("DSHS New County Data.xlsx", col_names=T, n_max=9)
 new_data_date = seq(20200901,20200930,1)
 new_data_date_oct = seq(20201001,20201031,1)
 new_data_date_nov = seq(20201101,20201130,1)
-new_data_date_dec = seq(20201201,20201227,1)
+new_data_date_dec = seq(20201201,20201231,1)
+new_data_date_jan = seq(20210101,20210103,1)
 new_data_date = append(new_data_date, new_data_date_oct)
 new_data_date = append(new_data_date, new_data_date_nov)
 new_data_date = append(new_data_date, new_data_date_dec)
+new_data_date = append(new_data_date, new_data_date_jan)
 colnames(new_data) = c("county", new_data_date)
 new_data = as.data.frame(new_data)
+
+
+new_data$`20201227` = round((new_data$`20201227`+new_data$`20201228`+new_data$`20201229`+new_data$`20201230`+new_data$`20201231`+
+  new_data$`20210101`+new_data$`20210102`+new_data$`20210103`)/8)
+new_data$`20201228` = new_data$`20201227`
+new_data$`20201229` = new_data$`20201227`
+new_data$`20201230` = new_data$`20201227`
+new_data$`20201231` = new_data$`20201227`
+new_data$`20210101` = new_data$`20201227`
+new_data$`20210102` = new_data$`20201227`
+new_data$`20210103` = new_data$`20201227`
 
 counties = unique(my_data$county)
 
