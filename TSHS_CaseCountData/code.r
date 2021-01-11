@@ -10,17 +10,17 @@ DATE[301:(ncol(my_data)-1)] = paste0("2021",str_match(string=colnames(my_data[,3
 DATE = gsub(x = DATE, pattern = "-", replacement = "")
 colnames(my_data)[grep(x=colnames(my_data), pattern="Cases")] = DATE
 
-my_data = my_data[, -c(2,305)]
+my_data = my_data[, -2]
 colnames(my_data)[1] = "county"
 my_data = as.data.frame(my_data)
 
-gap = round((my_data[,303] - my_data[,297])/7)
+gap = round((my_data[,311] - my_data[,297])/15)
 for(i in 297:ncol(my_data)){
   my_data[,i] = my_data[,i-1] + gap
 }
 
 # calculate new daily cases after specified days
-selected_date = which(colnames(my_data) == "20210103")
+selected_date = which(colnames(my_data) == "202101011")
 ## daily new cases dataframe
 if((ncol(my_data)-selected_date) >= 1){
   daily_new_cases = data.frame(matrix(nrow = 254, ncol = (ncol(my_data) - selected_date)))
@@ -36,7 +36,7 @@ new_data_date = seq(20200901,20200930,1)
 new_data_date_oct = seq(20201001,20201031,1)
 new_data_date_nov = seq(20201101,20201130,1)
 new_data_date_dec = seq(20201201,20201231,1)
-new_data_date_jan = seq(20210101,20210103,1)
+new_data_date_jan = seq(20210101,20210111,1)
 new_data_date = append(new_data_date, new_data_date_oct)
 new_data_date = append(new_data_date, new_data_date_nov)
 new_data_date = append(new_data_date, new_data_date_dec)
@@ -46,7 +46,8 @@ new_data = as.data.frame(new_data)
 
 
 new_data$`20201227` = round((new_data$`20201227`+new_data$`20201228`+new_data$`20201229`+new_data$`20201230`+new_data$`20201231`+
-  new_data$`20210101`+new_data$`20210102`+new_data$`20210103`)/8)
+  new_data$`20210101`+new_data$`20210102`+new_data$`20210103`+new_data$`20210104`+new_data$`20210105`+new_data$`20210106`+new_data$`20210107`
+  +new_data$`20210108`+new_data$`20210109`+new_data$`20210110`+new_data$`20210111`)/16)
 new_data$`20201228` = new_data$`20201227`
 new_data$`20201229` = new_data$`20201227`
 new_data$`20201230` = new_data$`20201227`
@@ -54,6 +55,14 @@ new_data$`20201231` = new_data$`20201227`
 new_data$`20210101` = new_data$`20201227`
 new_data$`20210102` = new_data$`20201227`
 new_data$`20210103` = new_data$`20201227`
+new_data$`20210104` = new_data$`20201227`
+new_data$`20210105` = new_data$`20201227`
+new_data$`20210106` = new_data$`20201227`
+new_data$`20210107` = new_data$`20201227`
+new_data$`20210108` = new_data$`20201227`
+new_data$`20210109` = new_data$`20201227`
+new_data$`20210110` = new_data$`20201227`
+new_data$`20210111` = new_data$`20201227`
 
 counties = unique(my_data$county)
 
