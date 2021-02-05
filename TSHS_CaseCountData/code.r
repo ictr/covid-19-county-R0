@@ -20,7 +20,7 @@ for(i in 297:311){
 }
 
 # calculate new daily cases after specified days
-selected_date = which(colnames(my_data) == "20210131")
+selected_date = which(colnames(my_data) == "20210204")
 ## daily new cases dataframe
 if((ncol(my_data)-selected_date) >= 1){
   daily_new_cases = data.frame(matrix(nrow = 254, ncol = (ncol(my_data) - selected_date)))
@@ -37,12 +37,12 @@ new_data_date_oct = seq(20201001,20201031,1)
 new_data_date_nov = seq(20201101,20201130,1)
 new_data_date_dec = seq(20201201,20201231,1)
 new_data_date_jan = seq(20210101,20210131,1)
-#new_data_date_feb = seq(20210201,20210201,1)
+new_data_date_feb = seq(20210201,20210204,1)
 new_data_date = append(new_data_date, new_data_date_oct)
 new_data_date = append(new_data_date, new_data_date_nov)
 new_data_date = append(new_data_date, new_data_date_dec)
 new_data_date = append(new_data_date, new_data_date_jan)
-#new_data_date = append(new_data_date, new_data_date_feb)
+new_data_date = append(new_data_date, new_data_date_feb)
 colnames(new_data) = c("county", new_data_date)
 new_data = as.data.frame(new_data)
 
